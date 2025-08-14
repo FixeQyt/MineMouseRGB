@@ -47,15 +47,15 @@ public class MouseColorAPI {
     }
 
         /**
-         * Powoduje, że myszka miga wybranym kolorem przez określoną liczbę razy i czas trwania.
-         *
-         * @param amount   liczba mignięć
-         * @param duration czas trwania jednego mignięcia (w milisekundach)
-         * @param r        składowa czerwona koloru (0-255)
-         * @param g        składowa zielona koloru (0-255)
-         * @param b        składowa niebieska koloru (0-255)
-         * @throws IOException jeśli wystąpi błąd wejścia/wyjścia podczas żądania
-         */
+          * Causes the mouse to blink with the selected color for a specified number of times and duration.
+          *
+          * @param amount   number of blinks
+          * @param duration duration of a single blink (in milliseconds)
+          * @param r        red component of the color (0-255)
+          * @param g        green component of the color (0-255)
+          * @param b        blue component of the color (0-255)
+          * @throws IOException if an I/O error occurs during the request
+          */
         public static void blinkColor(int ledIndex, int amount, int duration, int r, int g, int b) throws IOException {
             String urlStr = String.format("http://localhost:6969/mouse/color/blink/%d/%d/%d/%d/%d/%d", ledIndex, amount, duration, r, g, b);
             sendRequest(urlStr, "POST");

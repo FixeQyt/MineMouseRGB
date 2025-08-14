@@ -25,7 +25,7 @@ public class Colorcontrolrgb implements ModInitializer {
     @Override
     public void onInitialize() {
         try {
-            String colorJson = MouseColorAPI.getCurrentColor(); // Returns e.g. `{"scroll_wheel":{"r":0,"g":0,"b":0},"logo":{"r":0,"g":0,"b":0}}`
+            String colorJson = MouseColorAPI.getCurrentColor();
             int[] rgb = ColorJsonParser.parseLogoColor(colorJson);
             initialColor = rgb[0] + "," + rgb[1] + "," + rgb[2];
             int[] swRgb = ColorJsonParser.parseScrollWheelColor(colorJson);
@@ -65,7 +65,7 @@ public class Colorcontrolrgb implements ModInitializer {
             }
 
             if (mc.world == null) {
-                // Jeśli wyszliśmy do menu, przywróć kolor menu
+                // If we exited to the menu, restore the menu color
                 if (Colorcontrolrgb.lastWorldKey != null) {
                     try {
                         MouseColorAPI.changeColor(DeviceInfo.getLEDs().getLogoIndex(), Colors.MENU.r, Colors.MENU.g, Colors.MENU.b);
