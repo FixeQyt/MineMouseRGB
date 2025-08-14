@@ -19,7 +19,7 @@ def set_mouse_led_color(ledIndex: int, r: int, g: int, b: int):
 def get_mouse_colors():
     try:
         mouse = client.devices[0]
-        # Pobieranie kolorów z device.colors zamiast mouse.leds[x].color
+        # Getting colors from device.colors instead of mouse.leds[x].color
         colors = []
         for idx, color in enumerate(mouse.colors):
             colors.append({
