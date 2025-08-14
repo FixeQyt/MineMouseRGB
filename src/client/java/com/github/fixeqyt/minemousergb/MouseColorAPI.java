@@ -1,4 +1,4 @@
-package com.github.fixeqyt.colorcontrolrgb;
+package com.github.fixeqyt.minemousergb;
 
 import org.jetbrains.annotations.NotNull;
 

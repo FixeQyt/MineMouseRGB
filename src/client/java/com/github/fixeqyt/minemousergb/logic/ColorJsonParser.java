@@ -1,6 +1,6 @@
-package com.github.fixeqyt.colorcontrolrgb.logic;
+package com.github.fixeqyt.minemousergb.logic;
 
-import com.github.fixeqyt.colorcontrolrgb.DeviceInfo;
+import com.github.fixeqyt.minemousergb.DeviceInfo;
 import org.json.JSONObject;
 
 public class ColorJsonParser {

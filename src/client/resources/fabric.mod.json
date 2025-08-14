@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "colorcontrolrgb",
+  "id": "minemousergb",
   "version": "${version}",
-  "name": "ColorControlRGB",
+  "name": "MineMouseRGB",
   "description": "",
   "authors": [],
   "contact": {},
@@ -10,7 +10,7 @@
   "environment": "client",
   "entrypoints": {
     "main": [
-      "com.github.fixeqyt.colorcontrolrgb.Colorcontrolrgb"
+      "com.github.fixeqyt.minemousergb.MineMouseRGBMain"
     ]
   },
   "depends": {

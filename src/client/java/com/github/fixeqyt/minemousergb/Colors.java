@@ -1,4 +1,4 @@
-package com.github.fixeqyt.colorcontrolrgb;
+package com.github.fixeqyt.minemousergb;
 
 public enum Colors {
     LOGO_INIT(239, 50, 61),

@@ -1,7 +1,7 @@
-package com.github.fixeqyt.colorcontrolrgb.logic;
+package com.github.fixeqyt.minemousergb.logic;
 
-import com.github.fixeqyt.colorcontrolrgb.DeviceInfo;
-import com.github.fixeqyt.colorcontrolrgb.MouseColorAPI;
+import com.github.fixeqyt.minemousergb.DeviceInfo;
+import com.github.fixeqyt.minemousergb.MouseColorAPI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

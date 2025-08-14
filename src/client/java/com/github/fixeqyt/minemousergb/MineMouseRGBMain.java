@@ -1,8 +1,8 @@
-package com.github.fixeqyt.colorcontrolrgb;
+package com.github.fixeqyt.minemousergb;
 
-import com.github.fixeqyt.colorcontrolrgb.logic.BlinkExecutor;
-import com.github.fixeqyt.colorcontrolrgb.logic.ColorJsonParser;
-import com.github.fixeqyt.colorcontrolrgb.logic.ShutdownColorRestorer;
+import com.github.fixeqyt.minemousergb.logic.BlinkExecutor;
+import com.github.fixeqyt.minemousergb.logic.ColorJsonParser;
+import com.github.fixeqyt.minemousergb.logic.ShutdownColorRestorer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
@@ -13,9 +13,9 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
-public class Colorcontrolrgb implements ModInitializer {
+public class MineMouseRGBMain implements ModInitializer {
 
-    private static final Logger LOGGER = LogManager.getLogger(Colorcontrolrgb.class);
+    private static final Logger LOGGER = LogManager.getLogger(MineMouseRGBMain.class);
 
     private String initialColor;
     private String initialScrollColor;
@@ -66,25 +66,25 @@ public class Colorcontrolrgb implements ModInitializer {
 
             if (mc.world == null) {
                 // If we exited to the menu, restore the menu color
-                if (Colorcontrolrgb.lastWorldKey != null) {
+                if (MineMouseRGBMain.lastWorldKey != null) {
                     try {
                         MouseColorAPI.changeColor(DeviceInfo.getLEDs().getLogoIndex(), Colors.MENU.r, Colors.MENU.g, Colors.MENU.b);
                     } catch (Exception e) {
                         LOGGER.error("Error restoring menu color", e);
                     }
-                    Colorcontrolrgb.lastWorldKey = null;
+                    MineMouseRGBMain.lastWorldKey = null;
                 }
                 return;
             }
             var currentKey = mc.world.getRegistryKey();
-            if (Colorcontrolrgb.lastWorldKey == null || !Colorcontrolrgb.lastWorldKey.equals(currentKey)) {
-                Colorcontrolrgb.lastWorldKey = currentKey;
+            if (MineMouseRGBMain.lastWorldKey == null || !MineMouseRGBMain.lastWorldKey.equals(currentKey)) {
+                MineMouseRGBMain.lastWorldKey = currentKey;
                 try {
-                    if (Colorcontrolrgb.lastWorldKey.equals(World.OVERWORLD)) {
+                    if (MineMouseRGBMain.lastWorldKey.equals(World.OVERWORLD)) {
                         MouseColorAPI.changeColor(DeviceInfo.getLEDs().getLogoIndex(), Colors.OVERWORLD.r, Colors.OVERWORLD.g, Colors.OVERWORLD.b);
-                    } else if (Colorcontrolrgb.lastWorldKey.equals(World.NETHER)) {
+                    } else if (MineMouseRGBMain.lastWorldKey.equals(World.NETHER)) {
                         MouseColorAPI.changeColor(DeviceInfo.getLEDs().getLogoIndex(), Colors.NETHER.r, Colors.NETHER.g, Colors.NETHER.b);
-                    } else if (Colorcontrolrgb.lastWorldKey.equals(World.END)) {
+                    } else if (MineMouseRGBMain.lastWorldKey.equals(World.END)) {
                         MouseColorAPI.changeColor(DeviceInfo.getLEDs().getLogoIndex(), Colors.END.r, Colors.END.g, Colors.END.b);
                     }
                 } catch (Exception e) {
