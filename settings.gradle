@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+        maven {
+            name = 'SpongePowered'
+            url = 'https://repo.spongepowered.org/maven'
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "colorcontrolrgb",
+  "version": "${version}",
+  "name": "ColorControlRGB",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.github.fixeqyt.colorcontrolrgb.Colorcontrolrgb"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": ">=1.20.5"
+  }
+}
